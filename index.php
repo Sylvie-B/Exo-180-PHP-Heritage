@@ -64,5 +64,18 @@ $maison2 = new Maison('France', 'Fourmies', '59610', 3,3,true, 2, true);
 
 displayInfos($maison2);
 
-$appart = new Appartement('France', 'Fourmies', '59610', 2, 3,true);
+$appart = new Appartement('France', 'Fourmies', '59610', 2, 3,false);
+
+$appart->setPays('Pays imaginaire');
+$appart->setVille('dans les nuages');
+$appart->setCodeP('77 777');
+$appart->setChambres(12);
+$appart->setPieces(4);
+$appart->setGarage(true);
+
+echo "L'appartement se trouve en ".$appart->getPays().", ".$appart->getCodeP()." ".$appart->getVille();
+echo ", il a ".$appart->getChambres()." chambres".", ".$appart->getPieces()." pieces ";
+if($appart->isGarage()){
+    echo ", un garage";
+}
 
