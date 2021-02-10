@@ -6,8 +6,8 @@ class Habitation
     private string $pays;
     private string $ville;
     private string $codeP;
-    private string $chambres;
-    private string $pieces;
+    private int $chambres;
+    private int $pieces;
 
     /**
      * @return string
@@ -58,36 +58,35 @@ class Habitation
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getChambres(): string
+    public function getChambres(): int
     {
         return $this->chambres;
     }
 
     /**
-     * @param string $chambres
+     * @param int $chambres
      */
-    public function setChambres(string $chambres): void
+    public function setChambres(int $chambres): void
     {
         $this->chambres = $chambres;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getPieces(): string
+    public function getPieces(): int
     {
         return $this->pieces;
     }
 
     /**
-     * @param string $pieces
+     * @param int $pieces
      */
-    public function setPieces(string $pieces): void
+    public function setPieces(int $pieces): void
     {
         $this->pieces = $pieces;
     }
-
 
 }
