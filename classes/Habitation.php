@@ -10,6 +10,22 @@ class Habitation
     private int $pieces;
 
     /**
+     * Habitation constructor.
+     * @param string $pays
+     * @param string $ville
+     * @param string $codeP
+     * @param int $chambres
+     * @param int $pieces
+     */
+    public function __construct(string $pays, string $ville, string $codeP, int $chambres, int $pieces){
+        $this->setPays($pays);
+        $this->setVille($ville);
+        $this->setCodeP($codeP);
+        $this->setChambres($chambres);
+        $this->setPieces($pieces);
+}
+
+    /**
      * @return string
      */
     public function getPays(): string
