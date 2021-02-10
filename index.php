@@ -34,3 +34,35 @@
  *
  * 5. Créez une instance de Appartement et invoquez toutes les méthodes définies, y compris les setters ( dans index.php ).
  */
+
+
+// deux instances Maison
+
+require './classes/Habitation.php';
+require './classes/Appartement.php';
+require './classes/Maison.php';
+
+function displayInfos ($ref){
+    echo "La maison se trouve en ".$ref->getPays().", ".$ref->getCodeP()." ".$ref->getVille();
+    echo ", elle a ".$ref->getChambres()." chambres".", ".$ref->getPieces()." pieces ".$ref->getEtages()." étages";
+
+    if($ref->isGarage()){
+        echo ", un garage";
+    }
+
+    if($ref->isJardin()){
+        echo ", un jardin";
+    }
+    echo "<br>";
+}
+
+$maison1 = new Maison('France', 'Fourmies', '59610', 2, 3,true,1,true);
+
+displayInfos($maison1);
+
+$maison2 = new Maison('France', 'Fourmies', '59610', 3,3,true, 2, true);
+
+displayInfos($maison2);
+
+$appart = new Appartement('France', 'Fourmies', '59610', 2, 3,true);
+
